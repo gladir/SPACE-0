@@ -10,7 +10,11 @@ Voici la liste des différents fichiers proposés dans SPACE-0 :
 			<th>Nom</th>
 			<th>Description</th>	
 		</tr>
-   <tr>
+	    <tr>
+			<td><b>BRIEF.PAS</b></td>
+			<td>Cette commande permet de résumer de maniere concise des objets et couvertures temporelles SPK.</td>
+		</tr>
+        <tr>
 			 <td><b>LUNAR.PAS</b></td>
 			 <td>Cette commande permet d'effectuer une recherche des missions et alunissages lunaires.</td>
 	   </tr>
