@@ -1,5 +1,5 @@
 # SPACE-0
-Suite de commande écrit en Turbo Pascal/Free Pascal pour le secteur de l'aérospatiale
+Suite de commande écrit en Turbo Pascal/Free Pascal pour le secteur de l'aérospatiale.
 
 <h2>Liste des fichiers</h2>
 
