@@ -58,6 +58,10 @@ Voici la liste des différents fichiers proposés dans SPACE-0 :
 			<td><b>TOBIN.PAS</b></td>
 			<td>Cette commande permet de convertir les fichiers SPICE entre formats binaires et formats de transfert.</td>
 		</tr>
+		<tr>
+			<td><b>PINPOINT.PAS</b></td>
+			<td>Cette commande permet de construire un fichier SPK pour des objets à position fixe ou à vitesse constante relative à leur centre.</td>
+		</tr>
 </table>
 
 <h2>Compilation</h2>
