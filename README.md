@@ -30,6 +30,10 @@ Voici la liste des différents fichiers proposés dans SPACE-0 :
 			<td><b>SPACIT.PAS</b></td>
 			<td>Cette commande permet d'examiner des fichiers SPICE.</td>
 		</tr>
+		<tr>
+			<td><b>SPKDIFF.PAS</b></td>
+			<td>Cette commande permet d'échantillonner une trajectoire ou de comparer deux trajectoires.</td>
+		</tr>
 </table>
 
 <h2>Compilation</h2>
