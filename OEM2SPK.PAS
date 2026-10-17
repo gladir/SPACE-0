@@ -74,6 +74,7 @@ Var
  OutFile, TmpFile: File;
  OemOpen, OutOpen, TmpOpen: Boolean;
  Total, MetaCount: Integer;
+ FreeWord: LongInt;
  OemName, OutName, TmpName: String;
  Block: Array[0..127] Of Double;
  BlockFill: Integer;
@@ -604,7 +605,7 @@ Var
 Begin
  { Enregistrements 1 (fichier), 2 (commentaires), puis sommaires + noms. }
  FirstSum := 3;
- Free := WordAddr;
+ Free := FreeWord;
  Fwd := FirstSum;
  Bwd := FirstSum+2*(Total-1);
  FillChar(Rec,SizeOf(Rec),0);
@@ -769,6 +770,7 @@ Begin
  EndSegment;
  If SegCount = 0 Then Fail('Aucun bloc META avec des etats dans '+OemName+'.',1);
 
+ FreeWord := WordAddr;
  PadRecord;
  WriteDirectory;
  Cleanup(True);

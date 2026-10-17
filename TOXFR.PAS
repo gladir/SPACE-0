@@ -440,7 +440,7 @@ End;
 Procedure ReadDirectories;
 Var
  Rec, Fwd, Phys, Count, Visited, L: LongInt;
- T, W: Integer;
+ T, W, Sign: Integer;
  LogStart: Array[1..3] Of LongInt;
 Begin
  NClusters := 0;
@@ -459,11 +459,15 @@ Begin
   If (T < 1) Or (T > 3) Then Fail('Type du premier groupe DAS invalide.',1);
   Phys := Rec+1;
   W := 10;
+  Sign := 1;
   While W <= 256 Do Begin
    ReadRecord(Rec);
    Count := IntAt((W-1)*4);
    If Count = 0 Then Break;
-   If Count < 0 Then Fail('Descripteur de groupe DAS non pris en charge.',1);
+   { Le signe du descripteur donne le sens du changement de type dans le
+     cycle caractere, reel, entier : + type suivant, - type precedent. }
+   If Count < 0 Then Begin Sign := -1; Count := -Count End Else Sign := 1;
+   If W > 10 Then T := (T-1+Sign+3) Mod 3+1;
    If NClusters = MaxClusters Then Fail('Plus de '+Num(MaxClusters)+' groupes DAS.',1);
    If Phys+Count-1 > FileBytes Div 1024 Then Fail('Groupe DAS hors fichier.',1);
    Inc(NClusters);
@@ -473,7 +477,6 @@ Begin
    Clusters[NClusters].Start := LogStart[T];
    LogStart[T] := LogStart[T]+Count*WordsPer[T];
    Phys := Phys+Count;
-   T := T Mod 3+1;
    Inc(W);
   End;
   If (Fwd < 0) Or (Fwd > FileBytes Div 1024) Then Fail('Pointeur de repertoire DAS invalide.',1);

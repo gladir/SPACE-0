@@ -54,6 +54,10 @@ Voici la liste des différents fichiers proposés dans SPACE-0 :
 			<td><b>TOXFR.PAS</b></td>
 			<td>Cette commande permet de convertir les fichiers SPICE entre formats binaires et formats de transfert.</td>
 		</tr>
+		<tr>
+			<td><b>TOBIN.PAS</b></td>
+			<td>Cette commande permet de convertir les fichiers SPICE entre formats binaires et formats de transfert.</td>
+		</tr>
 </table>
 
 <h2>Compilation</h2>
