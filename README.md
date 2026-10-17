@@ -26,6 +26,10 @@ Voici la liste des différents fichiers proposés dans SPACE-0 :
 			 <td><b>LUNAR.PAS</b></td>
 			 <td>Cette commande permet d'effectuer une recherche des missions et alunissages lunaires.</td>
 	   </tr>
+		<tr>
+			<td><b>SPACIT.PAS</b></td>
+			<td>Cette commande permet d'examiner des fichiers SPICE.</td>
+		</tr>
 </table>
 
 <h2>Compilation</h2>
