@@ -34,6 +34,10 @@ Voici la liste des différents fichiers proposés dans SPACE-0 :
 			<td><b>SPKDIFF.PAS</b></td>
 			<td>Cette commande permet d'échantillonner une trajectoire ou de comparer deux trajectoires.</td>
 		</tr>
+		<tr>
+			<td><b>SPK2OEM.PAS</b></td>
+			<td>Cette commande permet d'exporter un fichier SPK vers un message d'éphémérides CCSDS OEM.</td>
+		</tr>
 </table>
 
 <h2>Compilation</h2>
