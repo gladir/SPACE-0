@@ -26,6 +26,10 @@ Voici la liste des différents fichiers proposés dans SPACE-0 :
 			<td><b>FRMDIFF.PAS</b></td>
 			<td>Cette commande permet de comparer des repères de référence.</td>
 		</tr>
+		<tr>
+			<td><b>DSKBRIEF.PAS</b></td>
+			<td>Cette commande permet d'examiner la couverture spatiale et les attributs de modèles de surface DSK.</td>
+		</tr>
         <tr>
 			 <td><b>LUNAR.PAS</b></td>
 			 <td>Cette commande permet d'effectuer une recherche des missions et alunissages lunaires.</td>
