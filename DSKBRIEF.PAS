@@ -420,7 +420,7 @@ Function BodyName(ID: LongInt): String;
 Var S: String;
 Begin
  S := '';
- If Not NumericOnly Then Case ID Of
+ If (Not NumericOnly) And (ID >= 0) And (ID <= 32767) Then Case Integer(ID) Of
   10: S := 'SUN';
   199: S := 'MERCURY';
   299: S := 'VENUS';
@@ -441,12 +441,15 @@ Begin
   899: S := 'NEPTUNE';
   901: S := 'CHARON';
   999: S := 'PLUTO';
-  2000001: S := 'CERES';
-  2000004: S := 'VESTA';
-  2000433: S := 'EROS';
-  2025143: S := 'ITOKAWA';
-  2101955: S := 'BENNU';
-  2162173: S := 'RYUGU';
+ End;
+ If Not NumericOnly Then Begin
+  { Hors de la portee d'un Case (Integer) en Turbo Pascal }
+  If ID = 2000001 Then S := 'CERES'
+  Else If ID = 2000004 Then S := 'VESTA'
+  Else If ID = 2000433 Then S := 'EROS'
+  Else If ID = 2025143 Then S := 'ITOKAWA'
+  Else If ID = 2101955 Then S := 'BENNU'
+  Else If ID = 2162173 Then S := 'RYUGU';
  End;
  If S = '' Then BodyName := Num(ID) Else BodyName := Num(ID)+' '+S;
 End;
@@ -455,7 +458,7 @@ Function FrameName(ID: LongInt): String;
 Var S: String;
 Begin
  S := '';
- If Not NumericOnly Then Case ID Of
+ If (Not NumericOnly) And (ID >= 0) And (ID <= 32767) Then Case Integer(ID) Of
   1: S := 'J2000';
   2: S := 'B1950';
   13: S := 'GALACTIC';

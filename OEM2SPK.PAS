@@ -609,13 +609,13 @@ Begin
  Fwd := FirstSum;
  Bwd := FirstSum+2*(Total-1);
  FillChar(Rec,SizeOf(Rec),0);
- Move('DAF/SPK ',Rec[0],8);
+ Nm := 'DAF/SPK '; For K := 1 To 8 Do Rec[K-1] := Ord(Nm[K]);
  PutInt(Rec,8,2); PutInt(Rec,12,6);
  Nm := 'OEM2SPK '+OemName;
  While Length(Nm) < 60 Do Nm := Nm+' ';
  For K := 1 To 60 Do Rec[15+K] := Ord(Nm[K]);
  PutInt(Rec,76,Fwd); PutInt(Rec,80,Bwd); PutInt(Rec,84,Free);
- Move('LTL-IEEE',Rec[88],8);
+ Nm := 'LTL-IEEE'; For K := 1 To 8 Do Rec[87+K] := Ord(Nm[K]);
  For K := 1 To 28 Do Rec[698+K] := Ord(FtpString[K]);
  {$I-} Seek(OutFile,0); Err := IOResult; {$I+}
  If Err <> 0 Then Fail('Positionnement impossible dans '+OutName+'.',1);
