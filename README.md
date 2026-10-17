@@ -18,6 +18,10 @@ Voici la liste des différents fichiers proposés dans SPACE-0 :
 			<td><b>CHRONOS.PAS</b></td>
 			<td>Cette commande permet d'effectuer la conversion des systèmes et formats temporels.</td>
 		</tr>
+		<tr>
+			<td><b>FRMDIFF.PAS</b></td>
+			<td>Cette commande permet de comparer des repères de référence.</td>
+		</tr>
         <tr>
 			 <td><b>LUNAR.PAS</b></td>
 			 <td>Cette commande permet d'effectuer une recherche des missions et alunissages lunaires.</td>
