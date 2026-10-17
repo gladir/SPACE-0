@@ -50,6 +50,10 @@ Voici la liste des différents fichiers proposés dans SPACE-0 :
 			<td><b>OEM2SPK.PAS</b></td>
 			<td>Cette commande permet de convertir un fichier d'éphémérides OEM vers SPK.</td>
 		</tr>
+		<tr>
+			<td><b>TOXFR.PAS</b></td>
+			<td>Cette commande permet de convertir les fichiers SPICE entre formats binaires et formats de transfert.</td>
+		</tr>
 </table>
 
 <h2>Compilation</h2>
