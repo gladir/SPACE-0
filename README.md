@@ -38,6 +38,10 @@ Voici la liste des différents fichiers proposés dans SPACE-0 :
 			<td><b>SPK2OEM.PAS</b></td>
 			<td>Cette commande permet d'exporter un fichier SPK vers un message d'éphémérides CCSDS OEM.</td>
 		</tr>
+		<tr>
+			<td><b>OEM2SPK.PAS</b></td>
+			<td>Cette commande permet de convertir un fichier d'éphémérides OEM vers SPK.</td>
+		</tr>
 </table>
 
 <h2>Compilation</h2>
