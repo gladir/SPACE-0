@@ -15,6 +15,10 @@ Voici la liste des différents fichiers proposés dans SPACE-0 :
 			<td>Cette commande permet de résumer de maniere concise des objets et couvertures temporelles SPK.</td>
 		</tr>
 		<tr>
+			<td><b>CKBRIEF.PAS</b></td>
+			<td>Cette commande permet de résumer le contenu et la couverture temporelle des fichiers d'orientation CK.</td>
+		</tr>
+		<tr>
 			<td><b>CHRONOS.PAS</b></td>
 			<td>Cette commande permet d'effectuer la conversion des systèmes et formats temporels.</td>
 		</tr>
